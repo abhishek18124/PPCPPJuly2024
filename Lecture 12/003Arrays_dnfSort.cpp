@@ -28,7 +28,7 @@ int main() {
 
 			low++;
 			swap(arr[mid], arr[low]);
-			mid++; // optional
+			mid++; // mandatory (what if initially arr[0] is 0)
 
 		} else if (arr[mid] == 1) {
 
