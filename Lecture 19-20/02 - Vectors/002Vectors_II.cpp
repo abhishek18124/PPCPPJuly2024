@@ -34,7 +34,9 @@ using namespace std;
 int main() {
 
 	// fill constructor
+
 	vector<int> v(5); // or vector<int> v(5, 100);
+
 	for (int i = 0; i < v.size(); i++) {
 		cout << v[i] << " ";
 	}
@@ -48,8 +50,20 @@ int main() {
 	v3 = v;
 
 	// range constructor
+
 	vector<int> v4 = {1, 2, 3, 4, 5};
+
 	vector<int> v5(v4.begin() + 1, v4.end());
+	for (int i = 0; i < v5.size(); i++) {
+		cout << v5[i] << " "; // 2 3 4 5
+	}
+	cout << endl;
+
+	vector<int> v6(v4.begin() + 1, v4.begin() + 3); // [start, end)
+	for (int i = 0; i < v6.size(); i++) {
+		cout << v6[i] << " "; // 2 3
+	}
+	cout << endl;
 
 	return 0;
 }

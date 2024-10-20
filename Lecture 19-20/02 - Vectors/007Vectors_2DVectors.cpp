@@ -15,26 +15,26 @@ int main() {
 	// int n = v[0].size(); // columns
 
 	// for (int i = 0; i < m; i++) {
-	// 	for (int j = 0; j < n; j++) {
+	// 	for (int j = 0; j < n; j++) { // use j < v[i].size() if 2d vec is jaggerd
 	// 		cout << v[i][j] << " ";
 	// 	}
 	// 	cout << endl;
 	// }
 	// cout << endl;
 
-	// vector<vector<int>> v = {
-	// 	{1, 2, 3},
-	// 	{4, 5, 6},
-	// 	{7, 8, 9}
-	// };
+	vector<vector<int>> v = {
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9}
+	};
 
-	// for (int i = 0; i < v.size(); i++) {
-	// 	for (int j = 0; j < v[0].size(); j++) {
-	// 		cout << v[i][j] << " ";
-	// 	}
-	// 	cout << endl;
-	// }
-	// cout << endl;
+	for (int i = 0; i < v.size(); i++) {
+		for (int j = 0; j < v[0].size(); j++) {
+			cout << v[i][j] << " ";
+		}
+		cout << endl;
+	}
+	cout << endl;
 
 	return 0;
 }
