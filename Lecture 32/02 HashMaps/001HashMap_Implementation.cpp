@@ -198,6 +198,16 @@ public :
 		}
 		cout << endl;
 	}
+
+	int& operator[](int K) {
+		node* n = find(K);
+		if (n == NULL) {
+			int garbage;
+			insert(K, garbage);
+			n = find(K);
+		}
+		return n->V;
+	}
 };
 
 int main() {
@@ -236,6 +246,25 @@ int main() {
 	hm.printHashMap();
 
 	hm.insert(8, 64);
+
+	hm.printHashMap();
+
+	cout << hm[7] << endl; // hm.operator[](7)
+
+	cout << hm[9] << endl; // hm.operator[](9)
+
+	// cout << hm[10] << endl; // hm.operator[](10)
+
+	hm[9] = 90; // here, we are expecting the value corr. to the key 9 is updated to 90
+	// hm.operator[](9) = 90;
+	// 81 = 90;
+
+	cout << hm[9] << endl;
+
+	hm[10] = 100; // here, we are expecting a new key,value pair (10, 100) is inserted into the hashMap
+	// hm.operator[](10) = 100;
+
+	cout << hm[10] << endl;
 
 	hm.printHashMap();
 
